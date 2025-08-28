@@ -1,11 +1,14 @@
-import { Button } from "./components/ui/button"
-
+import { BrowserRouter } from "react-router"
+import Layout from "./components/layout"
+import { ThemeProvider } from "./context/theme-provider"
 
 const App = () => {
   return (
-    <div>
-      <Button>Submit</Button>
-    </div>
+     <BrowserRouter>
+     <ThemeProvider defaultTheme="dark">
+     <Layout/>
+     </ThemeProvider>
+     </BrowserRouter>
   )
 }
 
